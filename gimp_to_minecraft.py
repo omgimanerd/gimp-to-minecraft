@@ -51,8 +51,11 @@ def gimp_to_minecraft(current_image, current_layer):
         copy = pdb.gimp_layer_new_from_drawable(layer, image)
         image.add_layer(copy)
         copy.translate(0, height * i)
-    # Merge all the visible layers
-    pdb.gimp_image_merge_visible_layers(image, 0) # EXPAND-AS-NECESSARY
+        # Force the layer to be visible.
+        pdb.gimp_item_set_visible(copy, True)
+    # Merge all the layers
+    image.merge_visible_layers(0) # EXPAND-AS-NECESSARY
+    pdb.gimp_item_set_name(image.layers[0], 'minecraft-texture')
     gimp.Display(image)
     gimp.displays_flush()
     gimp.delete(image)
