@@ -46,6 +46,8 @@ def minecraft_to_gimp(current_image, current_layer, frametime):
         layer.resize(width, width, 0, -height_offset)
         # Move the layer up to overlap back over the image bounds.
         layer.translate(0, -height_offset)
+
+    # Display the image and clean up
     gimp.Display(image)
     gimp.displays_flush()
     cleanup()

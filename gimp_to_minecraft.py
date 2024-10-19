@@ -56,13 +56,11 @@ def gimp_to_minecraft(current_image, current_layer):
     # Merge all the layers
     image.merge_visible_layers(0) # EXPAND-AS-NECESSARY
     pdb.gimp_item_set_name(image.layers[0], 'minecraft-texture')
+
+    # Display the image and clean up
     gimp.Display(image)
     gimp.displays_flush()
     gimp.delete(image)
-
-    gimp.message(
-        'Successfully converted %s into a Minecraft animated texture.' %
-        (current_image.name))
     cleanup()
 
 register(
