@@ -3,15 +3,17 @@
 The Python-Fu plugins here are used in GIMP 3.0 to convert between Minecraft's
 animated textures and a layered image that is easier to work with in GIMP.
 
-Find your GIMP directory and put the Python scripts in the plug-ins
-subdirectory.
-
-On Windows, the path will look something like:
-```
-C:/Users/USER/AppData/Roaming/GIMP/3.0/plug-ins/
-```
-
 ## Installation
+
+Find your GIMP plug-ins directory. You can see the directory by opening
+`Edit > Preferences > Folders > Plug-ins`.
+
+On Windows, there will usually be two paths that look something like:
+```
+C:/Users/USER/AppData/Roaming/GIMP/3.0/plug-ins
+C:/Users/USER/AppData/Local/Programs/GIMP 3/lib/gimp/3.0/plug-ins
+```
+Either of them of will work.
 
 If you are lazy, you can simply clone this project into the `plug-ins`
 directory.
@@ -51,7 +53,9 @@ image layers back into the Minecraft animated texture format.
 Using AE2's singularity texture as an example, invoking the script on the left
 image generates the image on the right, with each frame sliced into layers.
 You can then use `Filters > Animation > Playback` to preview the animation, and
-each frame becomes its own separate layer for editing.
+each frame becomes its own separate layer for editing. Once you're done editing
+the individual layers, you can use `GIMP to Minecraft` to convert it back into
+the Minecraft format.
 
 ## Author
 omgimanerd
