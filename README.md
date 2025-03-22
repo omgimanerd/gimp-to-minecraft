@@ -1,4 +1,4 @@
-# GIMP to Minecraft
+# gimp-minecraft-bridge
 
 The two scripts here can be loaded as Python-Fu plugins into GIMP 2.10 to
 convert between Minecraft's animated textures and a layered image that is easier
@@ -18,16 +18,16 @@ If you are lazy, you can simply clone this project into the plugins directory.
 ```
 cd path/to/GIMP/2.10/plug-ins
 
-git clone git@github.com:omgimanerd/gimp-to-minecraft .
+git clone git@github.com:omgimanerd/gimp-minecraft-bridge .
 ```
 
-Alternatively, you can just grab the file contents directly.
+Alternatively, you can grab the file contents directly.
 ```
 cd path/to/GIMP/2.10/plug-ins
 
-curl https://raw.githubusercontent.com/omgimanerd/gimp-to-minecraft/refs/heads/master/gimp_to_minecraft.py -o gimp_to_minecraft.py
+curl https://raw.githubusercontent.com/omgimanerd/gimp-minecraft-bridge/refs/heads/gimp-2.10/gimp_to_minecraft.py -o gimp_to_minecraft.py
 
-curl https://raw.githubusercontent.com/omgimanerd/gimp-to-minecraft/refs/heads/master/minecraft_to_gimp.py -o minecraft_to_gimp.py
+curl https://raw.githubusercontent.com/omgimanerd/gimp-minecraft-bridge/refs/heads/gimp-2.10/minecraft_to_gimp.py -o minecraft_to_gimp.py
 ```
 
 ## Usage
